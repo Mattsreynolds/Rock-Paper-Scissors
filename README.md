@@ -1,1 +1,2 @@
 # Rock-Paper-Scissors
+A game (used especially to settle petty disputes or as a tiebreaker) in which, at an agreed signal, each participant makes a gesture with one hand representing either a rock, paper, or a pair of scissors, the winner being determined according to an established scheme.
