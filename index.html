@@ -11,7 +11,7 @@
     <script>
 
     // Player enters rock, paper or scissors const playerSelection = "rock";
-    const playerSelection = window.prompt('Enter "Rock", "Paper" or "Scissors"');
+    let playerSelection = window.prompt('Enter "Rock", "Paper" or "Scissors"');
     playerSelection = playerSelection.toLowerCase()
     console.log(playerSelection);
 
@@ -19,8 +19,9 @@
     function getRandomInt(max) {
     return Math.floor(Math.random() * max);
     }
-    getRandomInt(3)
-    const computerSelection = getRandomInt(3);
+    //getRandomInt(3)
+    let computerSelection = getRandomInt(3);
+    
     if (computerSelection == 0)
         computerSelection = 'rock';
         else if (computerSelection == 1)
@@ -29,20 +30,23 @@
         computerSelection = 'scissors';
 
     // Compare player choice to computer choice
+    function compare(w, l, t) {
     if (playerSelection == computerSelection)
-        console.log('It\'s a tie!')
+        console.log(t)
         else if (playerSelection == 'rock' && computerSelection == 'scissors')
-        console.log('You win! Rock beats scissors')
+        console.log(w + ' Rock beats scissors')
         else if (playerSelection == 'rock' && computerSelection == 'paper')
-        console.log('You lose! Paper beats rock')
+        console.log(l + ' Paper beats rock')
         else if (playerSelection == 'paper' && computerSelection == 'rock')
-        console.log('You win! Paper beats rock')
+        console.log(w + ' Paper beats rock')
         else if (playerSelection == 'paper' && computerSelection == 'scissors')
-        console.log('You lose! Scissors beat paper')
+        console.log(l + ' Scissors beat paper')
         else if (playerSelection == 'scissors' && computerSelection == 'paper')
-        console.log('You win! Scissors beat paper')
+        console.log(w + ' Scissors beat paper')
         else if (playerSelection == 'scissors' && computerSelection == 'rock')
-        console.log('You lose! Rock beats scissors')
+        console.log(l + ' Rock beats scissors')
+    }
+    compare('You win!', 'You lose!', 'It\'s a tie');
 
     // Display who won
 
