@@ -1,13 +1,15 @@
 let win = 0;
 let lose = 0;
-
+let round = 1;
+let won = ('You won the game!');
+let tie = ('Tie game')
+let lost = ('You lost the game!');
 //Loops 5 rounds for a game
 function game() {
-    for (let i = 0; i < 5; i++) {
-
+    
         // Player enters rock, paper or scissors const playerSelection = "rock";
-        let playerSelection = window.prompt('Enter "Rock", "Paper" or "Scissors"');
-        playerSelection = playerSelection.toLowerCase()
+        //let playerSelection = window.prompt('Enter "Rock", "Paper" or "Scissors"');
+        //playerSelection = playerSelection.toLowerCase()
 
         // Computer generates a random rock, paper or scissors
         function getRandomInt(max) {
@@ -52,18 +54,33 @@ function game() {
         let result = playRound('You win!', 'You lose!', 'It\'s a tie');
         
         //Display results of each round
-        console.log(playerSelection)
+        document.getElementById("round").innerHTML = "Round  " + round;
+        document.getElementById("result").innerHTML = result;
+        console.log(playerSelection);
         console.log(result);
         console.log(computerSelection); 
+        document.getElementById("human").innerHTML = "Human  " + win;
         console.log(win);
+        document.getElementById("computa").innerHTML = "Computer  " + lose;
         console.log(lose);
-    }
-} game()
+
+        round++;
+    //}
+ 
+//game()
 
 // Display who won
-if (win > lose) {
-    console.log('You won the game!');
-    } else if (win == lose ) {
-    console.log('Tie game')
-    } else 
-        console.log('You lost the game!');
+        if (round == 6)
+            if (win > lose) {                
+                document.getElementById("result").innerHTML = won;
+                } else if (win == lose ) {   
+                    document.getElementById("result").innerHTML = tie;
+                } else 
+                    document.getElementById("result").innerHTML = lost;
+
+        if (round ==7) {
+            document.location.reload();
+        }
+                    
+
+}

@@ -1,0 +1,55 @@
+* {
+    background-color: black;
+    font-family: 'Amatic SC', cursive;
+}
+
+.container {    
+    display: flex;
+    justify-content: center;
+    color: blue;
+    margin: 0px;
+    font-size: 40px;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    color: red;
+    font-size: larger;
+}
+
+.buttons {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+        
+}
+
+#rock, #paper, #scissors {
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+    color: #39ff14;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+    color: #111;
+    background: #39ff14;
+    box-shadow: 0 0 50px #39ff14;
+}
